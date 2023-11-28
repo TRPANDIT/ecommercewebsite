@@ -28,11 +28,11 @@
                                 <span>price : {{item.price | currency:'INR'}}</span>
                                 <p class="mb-1">Quantity</p>
                                 <div class="add-remove-item">
-                                    <i class="material-icons" (click)="removeQuantity()">remove</i>
-                                    <span class="quantity-count">{{quantity}}</span>
-                                    <i class="material-icons" (click)="addQuantity()">add</i>
+                                    <i class="material-icons" (click)="removeQuantity(i)">remove</i>
+                                    <span class="quantity-count">{{item.quantity}}</span>
+                                    <i class="material-icons" (click)="addQuantity(i)">add</i>
                                 </div>
-                                <span>Total price : {{calculateTotalPrice() | currency:'INR'}}</span>
+                                <span>Total price : {{calculateTotalPrice(i) | currency:'INR'}}</span>
                             </div>
                         </div>
                         <div class="col-auto">
