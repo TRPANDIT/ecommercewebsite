@@ -133,28 +133,28 @@ export class CardsComponent {
 
   addQuantity(index: number) {
     console.log("card index: "+index);
-    this.addQuantity(index);
-  }
-
-  removeQuantity(index: number) {
-    let item = this.allCartItems[index];
-    if (item.quantity > 1) {
-      item.quantity--;
-      item.totalPrice = item.totalPrice - item.price;
-      this.allQuantity--;
-    }
+    this.cartService.addQuantity(index);
   }
 
   // removeQuantity(index: number) {
-  //   this.cartService.removeQuantity(index);
+  //   let item = this.allCartItems[index];
+  //   if (item.quantity > 1) {
+  //     item.quantity--;
+  //     item.totalPrice = item.totalPrice - item.price;
+  //     this.allQuantity--;
+  //   }
   // }
 
-  calculateTotalPrice(index: number): number {
-    let item = this.allCartItems[index];
-    return item.price * item.quantity;
+  removeQuantity(index: number) {
+    this.cartService.removeQuantity(index);
   }
 
   // calculateTotalPrice(index: number): number {
-  //   return this.calculateTotalPrice(index);
+  //   let item = this.allCartItems[index];
+  //   return item.price * item.quantity;
   // }
+
+  calculateTotalPrice(index: number): number {
+    return this.cartService.calculateTotalPrice(index);
+  }
 }
