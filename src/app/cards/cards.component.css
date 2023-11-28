@@ -1,19 +1,83 @@
 #cart{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0.1px 0.1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     border-radius: 4%;
-}
-
-.card-img-top {
     transform-origin: center center;
-    transition: transform 1s;
+    transition: transform 0.5s;
     cursor: pointer;
+    padding: 0rem 0.05rem;
 }
 
-.card-img-top:hover {
+.card{
+    border: none;
+}
+
+#cart:hover{
     transform: scale(1.1); 
 }
 
 .card-body{
     padding: 0.5rem;
+    border: none ;
+}
+
+#desc{
+    font-size: 10px;
+    margin: 2px 0px;
+}
+
+#price{
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 2px 0px;
+}
+
+.card-title{
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.btn{
+    padding: 0.1rem 0.2rem;
+    font-size: 0.8rem;
+}
+
+#left-card-container, #right-card-container{
+    height: 600px;
+    overflow-y: scroll;
+}
+
+#left-card-container::-webkit-scrollbar, #right-card-container::-webkit-scrollbar {
+    width: 0;
+}
+
+/* .material-icons{
+    font-size: 10rem;
+    cursor: pointer;
+} */
+
+.material-icons {
+    cursor: pointer;
+    font-size: 35px;
+    color: red;
+} 
+
+.add-remove-item{
+    display: flex;
+    align-items: center;
+}
+
+.add-remove-item i{
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    padding: 0.1rem;
+    border-radius: 10%;
+    margin: 0.5rem;
+}
+
+.quantity-count{
+    border: 1px solid black;
+    padding: 0rem 0.3rem;
+    font-size: 0.75rem;
 }
