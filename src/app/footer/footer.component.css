@@ -1,3 +1,14 @@
+/* #footer-top{
+    background-color: #004C3F;
+} */
+
 #footer-top{
     background-color: #004C3F;
+}
+.list-unstyled{
+    font-size: small;
+ 
+}
+p{
+    font-size: small;
 }

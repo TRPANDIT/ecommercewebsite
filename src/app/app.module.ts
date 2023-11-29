@@ -7,6 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
 import { FormsModule } from '@angular/forms';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
+import { OrdersComponent } from './orders/orders.component';
+import { CartsComponent } from './carts/carts.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +18,10 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     CardsComponent,
+    LoginFormComponent,
+    SignupFormComponent,
+    OrdersComponent,
+    CartsComponent,
   ],
   imports: [
     BrowserModule,

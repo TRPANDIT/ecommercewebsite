@@ -12,10 +12,13 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item mx-2" id="font">
-                    <a class="nav-link active" aria-current="page" href="#">About</a>
+                    <a class="nav-link active" aria-current="page" routerLink="cards">Products</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                    <a class="nav-link active" aria-current="page" routerLink="sign-up">Sign Up</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" aria-current="page" routerLink="sign-in">Sign In</a>
                 </li>
             </ul>
             <!-- <form class="d-flex">
@@ -25,9 +28,8 @@
 
             <form class="d-flex align-items-center">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <!-- <button class="btn  btn-success" type="submit">Search</button> -->
-                <i class="material-icons text-light">shopping_cart</i>
-                <span>{{quantityCount}}</span>
+                <i class="material-icons text-light " (click)="showCartItems()" style="cursor: pointer;">shopping_cart</i>
+                <span>{{totalItem()}}</span>
             </form>
         </div>
     </div>

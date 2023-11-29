@@ -42,42 +42,7 @@
     font-size: 0.8rem;
 }
 
-#left-card-container, #right-card-container{
-    height: 600px;
-    overflow-y: scroll;
-}
-
-#left-card-container::-webkit-scrollbar, #right-card-container::-webkit-scrollbar {
-    width: 0;
-}
-
-/* .material-icons{
-    font-size: 10rem;
-    cursor: pointer;
-} */
-
-.material-icons {
-    cursor: pointer;
-    font-size: 35px;
-    color: red;
-} 
-
-.add-remove-item{
-    display: flex;
-    align-items: center;
-}
-
-.add-remove-item i{
-    font-size: 1rem;
-    color: white;
-    background-color: black;
-    padding: 0.1rem;
-    border-radius: 10%;
-    margin: 0.5rem;
-}
-
-.quantity-count{
-    border: 1px solid black;
-    padding: 0rem 0.3rem;
-    font-size: 0.75rem;
+.card-img-top{
+    margin-left: 14px;
+    margin-top: 10px;
 }

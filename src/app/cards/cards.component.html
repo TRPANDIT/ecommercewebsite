@@ -1,46 +1,22 @@
+<!-- This is container -->
 <div class="container-fluid my-3">
     <div class="row">
-        <div class="col-8" id="left-card-container">
+        <div class="col" id="left-card-container">
             <h3 style="text-align: center; margin: 1.5rem 0rem;">All Products</h3>
             <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6 col-sm-12 mb-5 mx-4" *ngFor="let item of items;" id="cart">
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-5 mx-4" *ngFor="let item of items; let i = index" id="cart">
                     <div class="card" style="width: 100%;">
-                        <img src="{{item.itemUrl}}" class="card-img-top" alt="..." style="height: 12rem;">
+                        <img src="{{item.itemUrl}}" class="card-img-top" alt="..." style="height: 12rem; width: 180px;">
                         <div class="card-body">
                             <h6 class="card-title">{{item.title}}</h6>
                             <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; max-width: 100ch;"
                                 id="desc">{{item.desc}}</p>
                             <p id="price">Price : {{item.price | currency:'INR'}}</p>
-                            <a href="#" class="btn btn-primary" (click)="addCart(item)">Add cart</a>
+                            <a routerLink="../cards" class="btn btn-primary" (click)="addCartItems(item, i)">Add cart</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-4" id="right-card-container">
-            <h3 style="text-align: center; margin: 1.5rem 0rem;">All Cart Items</h3>
-            <ul class="list-group">
-                <li class="list-group-item mb-3" *ngFor="let item of allCartItems; let i = index">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <img src="{{item.itemUrl}}" alt="" height="100rem" width="100rem">
-                            <div class="cart-item-detail">
-                                <span>price : {{item.price | currency:'INR'}}</span>
-                                <p class="mb-1">Quantity</p>
-                                <div class="add-remove-item">
-                                    <i class="material-icons" (click)="removeQuantity(i)">remove</i>
-                                    <span class="quantity-count">{{item.quantity}}</span>
-                                    <i class="material-icons" (click)="addQuantity(i)">add</i>
-                                </div>
-                                <span>Total price : {{calculateTotalPrice(i) | currency:'INR'}}</span>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="material-icons" (click)="removeItems(i)">delete</i>
-                        </div>
-                    </div>
-                </li>
-            </ul>
         </div>
     </div>
 </div>

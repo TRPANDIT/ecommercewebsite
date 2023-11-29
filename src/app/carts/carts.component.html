@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6" id="right-card-container">
+            <h3 style="text-align: center; margin: 1.5rem 0rem;">All Cart Items</h3>
+            <ul class="list-group">
+                <li class="list-group-item mb-3" *ngFor="let item of cartItems; let i = index">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <img src="{{item.itemUrl}}" alt="" height="100rem" width="100rem">
+                            <div class="cart-item-detail">
+                                <span>price : {{item.price | currency:'INR'}}</span>
+                                <p class="mb-1">Quantity</p>
+                                <!-- <div *ngIf="flag1 == 'true'">
+                                    <h1>Out of stock</h1>
+                                </div> -->
+                                <div class="add-remove-item">
+                                    <i class="material-icons" (click)="decreaseQuantity(i)">remove</i>
+                                    <span class="quantity-count">{{item.quantity}}</span>
+                                    <i class="material-icons" (click)="increaseQuantity(i)">add</i>
+                                </div>
+                                <span>Total price : {{calculateTotalPrice(i) | currency:'INR'}}</span>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="material-icons" (click)="removeCartItems(i)">delete</i>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
