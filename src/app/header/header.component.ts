@@ -8,15 +8,32 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  
-  constructor(private cartService: CartQuantityService ,private router: Router) {}
+  items: any[] = [];
+
+  constructor(
+    private cartService: CartQuantityService,
+    private router: Router
+  ) {}
+
+  ngOnInit() {
+    this.items = this.cartService.getAllItems();
+  }
 
   //This full will return total count of product inside cart
   totalItem() {
     return this.cartService.readCartQuantity();
   }
 
-  showCartItems(){
+  //This will show all carts items
+  showCartItems() {
     this.router.navigate(['carts']);
+  }
+
+  filterProduct: any[] = [];
+  filterString: string = '';
+  filterProducts() {
+    this.filterProduct = this.items.filter((eachItem) => {
+      return eachItem.bookTitle.startsWith(this.filterString);
+    });
   }
 }

@@ -3,6 +3,22 @@
         <div class="col-4" id="signup-form">
             <form>
                 <div class="mb-3">
+                    <label for="fullName" class="form-label">Your name</label>
+                    <input type="text" class="form-control" id="fullName">
+                </div>
+                <div class="mb-3">
+                    <label for="phoneNo" class="form-label">Mobile number</label>
+                    <div id="mobile-no">
+                        <select id="phonecode" class="form-control" name="phonecode">
+                            <option value="India +91" selected>India</option>
+                            <option value="Japan +81">Japan</option>
+                            <option value="United States +1">United States</option>
+                            <option value="United Kingdom +44">United Kingdom</option>
+                        </select>
+                        <input type="number" class="form-control" id="phoneNo">
+                    </div>
+                </div>
+                <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="email">
                 </div>
@@ -16,6 +32,9 @@
                 </div>
                 <div class="d-grid  mb-3">
                     <button class="btn btn-primary" type="button">Sign Up</button>
+                </div>
+                <div class="mb-3 text-center">
+                    <p>Already have an account? <a routerLink="../sign-in" class="text-decoration-none">Login</a></p>
                 </div>
             </form>
         </div>

@@ -4,9 +4,10 @@ import { CardsComponent } from './cards/cards.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { CartsComponent } from './carts/carts.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'cards',
+  { path: '', redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path:'carts',
     component: CartsComponent
+  },
+  {
+    path:'home',
+    component: HomeComponent
   }
 ];
 

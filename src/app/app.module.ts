@@ -11,6 +11,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { OrdersComponent } from './orders/orders.component';
 import { CartsComponent } from './carts/carts.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CartsComponent } from './carts/carts.component';
     SignupFormComponent,
     OrdersComponent,
     CartsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

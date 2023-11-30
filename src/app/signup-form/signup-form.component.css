@@ -3,3 +3,16 @@
     padding: 2rem 3rem;
     border-radius: 2%;
 }
+
+#mobile-no{
+    display: flex;
+    justify-content: space-between;
+}
+
+#mobile-no select{
+    flex-basis: 25%;
+}
+
+#mobile-no #phoneNo{
+    flex-basis: 70%;
+}
